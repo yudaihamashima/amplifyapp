@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 //import { API } from 'aws-amplify'
 //import { listNotes } from './graphql/queries'
+import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
 
 
 import logo from './logo.svg';
@@ -10,7 +11,7 @@ import Amplify from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react'
 import "@aws-amplify/ui-react/styles.css"
 import config from './aws-exports';
-Amplify.configure(config);
+//Amplify.configure(config);
 
 function App({signOut, user}) {
   return (
