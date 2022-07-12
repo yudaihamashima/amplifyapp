@@ -1,13 +1,13 @@
+import React from 'react'
+
 import logo from './logo.svg';
 import './App.css';
 
-
-import Amplify from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react'
-import "@aws-amplify/ui-react/styles.css"
-
-import config from './aws-exports';
-Amplify.configure(config);
+//import Amplify from 'aws-amplify';
+//import { withAuthenticator } from '@aws-amplify/ui-react'
+//import "@aws-amplify/ui-react/styles.css"
+//import config from './aws-exports';
+//Amplify.configure(config);
 
 function App({signOut, user}) {
   return (
@@ -15,6 +15,7 @@ function App({signOut, user}) {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello from V2</h1>
+        {/*
         {user ? (
           <>
             <h3>権限あり:{user.username}</h3>
@@ -25,6 +26,7 @@ function App({signOut, user}) {
             <h3>権限なし</h3>
           </>
         )}
+        */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -41,4 +43,5 @@ function App({signOut, user}) {
   );
 }
 
-export default withAuthenticator(App);
+export default App;
+//export default withAuthenticator(App);
